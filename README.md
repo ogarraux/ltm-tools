@@ -1,9 +1,9 @@
 ## Overview
 This set of scripts connect to F5 devices using the SOAP iControl API to extract and store information about the virtual servers, pools, nodes, and iRules.
 ## Requirements
-This requires Python 2.6. I don’t think the bigsuds library is compatible with Python 3.x.  It also requires SQLite 3. That works with Python out of the box on RHEL 6 based distros for me.
+This requires Python 2.6 / 2.7. I don’t think the bigsuds library is compatible with Python 3.x.  It also requires SQLite 3. That works with Python out of the box on RHEL 6 based distros for me.
 
-The F5 **bigsuds** library is available [here](https://devcentral.f5.com/d/bigsuds-python-icontrol-library).  After downloading and extracting that, you can run "python setup.py install" to install the module.
+Install the F5 **bigsuds** library (and it's requirements) with pip: `pip install -r requirements.txt`
 
 On the F5 side, this should work with 11.x F5’s.  Interacting with version 10 requires using different methods in bigsuds.  There’s no reason it couldn’t be modified to work with 10.x, but I don’t use 10.x devices enough myself for it to be worthwhile.
 ## Usage
